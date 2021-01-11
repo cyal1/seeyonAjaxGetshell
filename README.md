@@ -1,5 +1,5 @@
 # seeyonAjaxGetshell
-致远seeyon未授权漏洞+文件上传批量getshell
+致远OAseeyon未授权漏洞+文件上传批量getshell
 
 ~~抄~~借鉴tools论坛大佬的payload写了个批量拿shell的脚本。
 
