@@ -1,0 +1,2 @@
+# seeyonAjaxGetshell
+致远seeyon未授权漏洞批量getshell
